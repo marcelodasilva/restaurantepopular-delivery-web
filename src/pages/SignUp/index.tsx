@@ -10,7 +10,7 @@ async function handleSubmit(event: FormEvent<HTMLFormElement>): Promise<void> {
   // TODO
 }
 
-const Login: React.FC = () => {
+const SignUp: React.FC = () => {
   return (
     <Container>
       <section>
@@ -18,23 +18,35 @@ const Login: React.FC = () => {
         <form onSubmit={handleSubmit}>
           <input
             type="text"
+            name="name"
+            placeholder="Digite seu nome completo"
+          />
+          <input
+            type="text"
             name="username"
             placeholder="Digite seu nome de usuário"
           />
+          <input type="email" name="email" placeholder="Digite seu email" />
+
           <input
             type="password"
-            name="password"
+            name="password1"
             placeholder="Digite sua Senha"
           />
-          <button type="submit">Entrar</button>
+          <input
+            type="password"
+            name="password2"
+            placeholder="Confirme sua Senha"
+          />
+
+          <button type="submit">Cadastrar</button>
         </form>
         <div>
-          <Link to="/register">Cadastrar-se</Link>
-          <Link to="/recover_password">Esqueci a senha</Link>
+          <Link to="/">Entrar</Link>
         </div>
       </section>
     </Container>
   );
 };
 
-export default Login;
+export default SignUp;
