@@ -12,12 +12,12 @@ export const Container = styled.div`
   align-items: center;
 
   section {
-    height: 90%;
+    height: auto;
     width: 90%;
     border-radius: 15px;
     background: #d0d0d030;
     border: 1px solid #d0d0d060;
-    max-height: 450px;
+    max-height: 800px;
     max-width: 400px;
     padding: 10px;
     display: flex;
@@ -64,13 +64,11 @@ export const Container = styled.div`
       display: flex;
       align-items: center;
       justify-content: space-between;
+      padding: 10px 0;
       a {
         text-decoration: none;
         color: #fff;
         font-size: 16px;
-        padding-left: 3px;
-        padding: 10px 0;
-
         transition: color ease-in-out 350ms;
         &:hover {
           color: #b57b07;
